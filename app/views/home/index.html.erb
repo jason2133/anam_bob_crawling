@@ -1,0 +1,81 @@
+<div class="container">  
+    <h1 class="text-center mt-5">안암학사 학생식당 식단표</h1>
+
+    <a href="eating" style="float:right"><button type="button" class="btn btn-primary">식단표 가져오기</button></a> 
+        <% if @mon %>    
+            <h2>기간: <%= @mon.date %>~<%= @sat.date %></h2>    
+            <table class="table">      
+            <thead>
+                <tr>          
+                    <th></th>          
+                        <th>아침 한식</th>          
+                        <th>아침 양식</th>          
+                        <th>테이크아웃</th>
+                        <th>점심</th>
+                        <th>저녁</th>        
+                </tr>      
+            </thead>      
+                        
+            <tbody>        
+                <tr>
+                    <th scope="row">월(<%= @mon.date %>)</th>          
+                    <td><%= @mon.mornhan %></td>          
+                    <td><%= @mon.mornyang %></td>          
+                    <td><%= @mon.takeout %></td>
+                    <td><%= @mon.lunch %></td>
+                    <td><%= @mon.dinner %></td>        
+                </tr>
+
+                <tr>          
+                    <th scope="row">화(<%= @tue.date %>)</th>          
+                    <td><%= @tue.mornhan %></td>          
+                    <td><%= @tue.mornyang %></td>          
+                    <td><%= @tue.takeout %></td>
+                    <td><%= @tue.lunch %></td>
+                    <td><%= @tue.dinner %></td>        
+                </tr>        
+                
+                <tr>          
+                    <th scope="row">수(<%= @wed.date %>)</th>          
+                    <td><%= @wed.mornhan %></td>          
+                    <td><%= @wed.mornyang %></td>          
+                    <td><%= @wed.takeout %></td>
+                    <td><%= @wed.lunch %></td>
+                    <td><%= @wed.dinner %></td>        
+                </tr>        
+                
+                <tr>          
+                    <th scope="row">목(<%= @thu.date %>)</th>          
+                    <td><%= @thu.mornhan %></td>          
+                    <td><%= @thu.mornyang %></td>          
+                    <td><%= @thu.takeout %></td>
+                    <td><%= @thu.lunch %></td>
+                    <td><%= @thu.dinner %></td>        
+                </tr>        
+                
+                <tr>          
+                    <th scope="row">금(<%= @fri.date %>)</th>          
+                    <td><%= @fri.mornhan %></td>          
+                    <td><%= @fri.mornyang %></td>          
+                    <td><%= @fri.takeout %></td>
+                    <td><%= @fri.lunch %></td>
+                    <td><%= @fri.dinner %></td>        
+                </tr>        
+                
+                <tr>          
+                    <th scope="row">토(<%= @sat.date %>)</th>          
+                    <td><%= @sat.mornhan %></td>          
+                    <td><%= @sat.mornyang %></td>          
+                    <td><%= @sat.takeout %></td>          
+                    <td>없음</td>          
+                    <td>없음</td>        
+                </tr>      
+            </tbody>    
+        </table>  
+    <% end %> 
+</div>
+
+
+
+
+
